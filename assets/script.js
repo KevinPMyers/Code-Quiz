@@ -91,6 +91,10 @@ timeSet = setInterval(function() {
         clearInterval(timeSet);
 
     }
+
+    if(timeRemain === 0){
+        makeQuiz();
+    }
 }, 1000);
 
 };
@@ -124,15 +128,15 @@ makeQuiz();
 
 buttonA.addEventListener("click", () => {
     
-    checkRight;})
+    checkRight();})
 buttonB.addEventListener("click", () => {
     
-    checkRight;});
+    checkRight();});
 buttonC.addEventListener("click", () => {
     
-    checkRight;})
+    checkRight();})
 buttonD.addEventListener("click", () => {
     
-    checkRight;})
+    checkRight();})
 
 startButton.addEventListener("click", startQuiz);

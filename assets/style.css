@@ -9,3 +9,9 @@ h1 {
 .container {
     text-align: center;
 }
+
+#startbtn {
+    background-color: blue;
+    color: yellow;
+    
+}
