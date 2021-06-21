@@ -3,10 +3,10 @@ var resultsContainer = document.getElementById('results');
 var startButton = document.getElementById('startbtn');
 var quizEl = document.getElementById('questions');
 var startQuizCon = document.getElementById("start-quiz");
-var buttonA = document.getElementById("a");
-var buttonB = document.getElementById("b");
-var buttonC = document.getElementById("c");
-var buttonD = document.getElementById("d");
+var buttonA = document.getElementById("a-btn");
+var buttonB = document.getElementById("b-btn");
+var buttonC = document.getElementById("c-btn");
+var buttonD = document.getElementById("d-btn");
 
 
 
@@ -100,5 +100,9 @@ function checkRight(rightAnswer){
 }
 makeQuiz();
 
+a-btn.addEventListener("click", checkRight);
+b-btn.addEventListener("click", checkRight);
+c-btn.addEventListener("click", checkRight);
+d-btn.addEventListener("click", checkRight);
 
 startButton.addEventListener("click", startQuiz);
