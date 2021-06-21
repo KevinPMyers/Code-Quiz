@@ -3,6 +3,7 @@ var resultsContainer = document.getElementById('results');
 var startButton = document.getElementById('startbtn');
 var quizEl = document.getElementById('questions');
 var startQuizCon = document.getElementById("start-quiz");
+var timer = document.getElementById("timer");
 var buttonA = document.getElementById("a-btn");
 var buttonB = document.getElementById("b-btn");
 var buttonC = document.getElementById("c-btn");
@@ -55,7 +56,11 @@ var codeQuestions = [
 ];
 var lastQuestion = codeQuestions.length
 var currentQuestionArray = 0;
+var score = 0;
+console.log(score);
+timeRemain = 100;
 var correct;
+
 
 function makeQuiz() {
     
@@ -78,7 +83,21 @@ function startQuiz(){
 startQuizCon.style.display = "none";
 makeQuiz();
 
+timeSet = setInterval(function() {
+    timeRemain--;
+    timer.textContent = "Time Remaining " + timeRemain;
+
+    if(timeRemain === 0){
+        clearInterval(timeSet);
+
+    }
+}, 1000);
+
 };
+
+// function newScore(){
+
+// }
 
 
 function checkRight(rightAnswer){
@@ -96,13 +115,13 @@ function checkRight(rightAnswer){
         currentQuestionArray++;
         makeQuiz();
     }
-    
+    console.log(checkRight);
 }
 makeQuiz();
 
-a-btn.addEventListener("click", checkRight);
-b-btn.addEventListener("click", checkRight);
-c-btn.addEventListener("click", checkRight);
-d-btn.addEventListener("click", checkRight);
+buttonA.addEventListener("click", checkRight);
+buttonB.addEventListener("click", checkRight);
+buttonC.addEventListener("click", checkRight);
+buttonD.addEventListener("click", checkRight);
 
 startButton.addEventListener("click", startQuiz);
