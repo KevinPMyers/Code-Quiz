@@ -10,3 +10,6 @@ To display my abilities in JavaScript and local storage by creating a coding qui
 
 ## Made By
 Kevin Myers
+
+## Link
+https://kevinpmyers.github.io/Code-Quiz/
