@@ -103,19 +103,22 @@ timeSet = setInterval(function() {
 function checkRight(rightAnswer){
     correct = codeQuestions[currentQuestionArray].rightAnswer;
 
-    if (rightAnswer === correct && currentQuestionArray ){
+    if (rightAnswer === correct && currentQuestionArray !== lastQuestion ){
         score++;
         alert("You got it right!");
         currentQuestionArray++;
         makeQuiz();
     }
 
-    else if (rightAnswer !== correct && currentQuestionArray ){
+    else if (rightAnswer !== correct && currentQuestionArray !== lastQuestion ){
         alert("Nope nope nope!")
         currentQuestionArray++;
+        
         makeQuiz();
     }
-    console.log(checkRight);
+    else {
+        newScore();
+    }
 }
 makeQuiz();
 
